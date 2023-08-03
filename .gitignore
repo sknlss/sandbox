@@ -1,5 +1,8 @@
 gitignore/
 
+# Auth information
+auth/
+tgtokens.py
 
 # Environments
 .env
