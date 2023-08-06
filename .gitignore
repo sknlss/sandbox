@@ -1,5 +1,8 @@
 gitignore/
 
+# Background processes
+nohup.out
+
 # Auth information
 auth/
 tgtokens.py
