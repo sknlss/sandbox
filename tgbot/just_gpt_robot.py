@@ -6,9 +6,9 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.contrib.middlewares.logging import LoggingMiddleware
 from aiogram import executor
 
-from auth.tgtokens import just_roll_d20_bot
+from auth.tgtokens import just_gpt_robot
 
-bot = Bot(token=just_roll_d20_bot)
+bot = Bot(token=just_gpt_robot)
 dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
