@@ -6,6 +6,7 @@ nohup.out
 # Auth information
 auth/
 tgtokens.py
+openaitokens.py
 
 # Environments
 .env

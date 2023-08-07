@@ -78,7 +78,7 @@ async def process_callback(callback_query: types.CallbackQuery):
 @dp.message_handler()
 async def echo(message: types.Message):
     try:
-        await message.answer(str(d20.roll(message.text)))
+        await message.answer(str(d20.roll(message.text.lower())))
     except Exception as e:
         if message.chat.type == types.ChatType.GROUP or message.chat.type == types.ChatType.SUPERGROUP:
             pass
