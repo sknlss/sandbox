@@ -1,5 +1,3 @@
-import re
-
 import d20
 
 from aiogram import Bot, Dispatcher, types

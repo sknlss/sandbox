@@ -8,6 +8,10 @@ auth/
 tgtokens.py
 openaitokens.py
 
+# Logs
+log/
+messages.csv
+
 # Environments
 .env
 .venv
