@@ -1,7 +1,6 @@
 import d20
 import csv
 from aiogram import Bot, Dispatcher, types
-from aiogram.contrib.middlewares.logging import LoggingMiddleware
 from aiogram import executor
 from auth.tgtokens import witty_robot
 from log_message import log_message
