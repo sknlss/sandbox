@@ -21,6 +21,7 @@ async def send_welcome(message: types.Message):
 @dp.message_handler(content_types=types.ContentTypes.TEXT)
 async def handle_message(message: types.Message):
     try:
+        
         # Отправляем запрос в OpenAI API с использованием правильного конечного точки для chat
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",

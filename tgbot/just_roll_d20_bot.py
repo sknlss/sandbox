@@ -5,7 +5,7 @@ from aiogram import executor
 from auth.tgtokens import just_roll_d20_bot
 from log_message import log_message
 
-# Путь к файлу с логами
+# Путь к файлу с логами сообщений и юзернейм пользователя, для которого команда /dialogs будет работать
 log_path = 'tgbot/log/messages.csv'
 bot_owner = 'sknlss'
 bot = Bot(token=just_roll_d20_bot)
@@ -19,7 +19,7 @@ async def send_dice(message: types.Message, num_sides: int):
     await message.answer(str(d20.roll(f'd{num_sides}')))
     await log_message(await bot.get_me(), message, log_path)
 
-# Создание обработчиков для каждой команды кубика
+# Обработчик для команд /d4 /6 и т.д.
 for num_sides in dice_variants:
     command = f'd{num_sides}'
     dp.register_message_handler(lambda message, ns=num_sides: send_dice(message, ns), commands=command)
